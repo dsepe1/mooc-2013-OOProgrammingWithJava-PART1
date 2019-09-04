@@ -42,10 +42,24 @@ public class HangmanLogic {
         // program here the functionality for building the hidden word
 
         // create the hidden word by interating through this.word letter by letter
-        // if the letter in turn is within the guessed words, put it in to the hidden word
+        // if the letter in turn is within the guessed letters, put it in to the hidden word
         // if the letter is not among guessed, replace it with _ in the hidden word 
 
         // return the hidden word at the end
-        return "";
+        String hiddenWord = "";
+        String guessedLetter = "";
+        
+        int i = 0;
+        while (i < this.word.length()) {
+            hiddenWord = hiddenWord + this.word.charAt(i);
+            i++;
+        }
+        
+        char c = this.r;
+        if (hiddenWord.contains(this.guessedLetters)) {
+            String aString = "" + c;
+        }
+            
+        return hiddenWord;
     }
 }
