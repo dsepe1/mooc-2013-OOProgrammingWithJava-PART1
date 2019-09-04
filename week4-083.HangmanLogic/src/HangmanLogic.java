@@ -30,6 +30,12 @@ public class HangmanLogic {
 
         // it the word does not contains the guessed letter, number of faults increase
         // the letter is added among the already guessed letters
+        if (!this.guessedLetters.contains(letter)) {
+            this.guessedLetters = this.guessedLetters + letter;
+        }
+        if (!this.word.contains(letter)) {
+            this.numberOfFaults++;
+        }
     }
 
     public String hiddenWord() {
