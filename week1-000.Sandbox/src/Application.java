@@ -2,11 +2,30 @@
 // whatever you want
 import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Application {
 
     public static void main(String[] args) {
         Scanner reader = new Scanner(System.in);
+        
+        Random random = new Random();
+        
+        int number = random.nextInt(26);
+        char symbol = "abcdefghijklmnopqrstuvwxyz".charAt(number);
+        int passwordLength = 13;
+        String password = "";
+        
+        int i = 0;
+        String help = "";
+        while (i < passwordLength) {
+            help = help + symbol;
+            i++;
+            number = random.nextInt(26);
+            symbol = "abcdefghijklmnopqrstuvwxyz".charAt(number);
+        }
+        password = help;
+        System.out.println(password);
         
 //        String name = "Donna";
 //        String where = "Ireland";
@@ -27,8 +46,8 @@ public class Application {
 //        for (String person : teachers) {
 //            System.out.println(person);
 //        }
-        double squared = Math.pow(3, 2);
-        System.out.println("3 squared = " + squared);
+//        double squared = Math.pow(3, 2);
+//        System.out.println("3 squared = " + squared);
     }
     
 //    public static void greet(String name, String place) {
