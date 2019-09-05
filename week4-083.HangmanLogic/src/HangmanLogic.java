@@ -1,3 +1,4 @@
+//import java.util.ArrayList;
 
 public class HangmanLogic {
 
@@ -46,8 +47,13 @@ public class HangmanLogic {
         // if the letter is not among guessed, replace it with _ in the hidden word 
 
         // return the hidden word at the end
+//        ArrayList<String> letterList = new ArrayList<String>();
+//        letterList.add(this.word);
+//        
+//        for ( String word : letterList) {
+//            
+//        }
         String hiddenWord = "";
-        String guessedLetter = "";
         
         int i = 0;
         while (i < this.word.length()) {
@@ -55,9 +61,10 @@ public class HangmanLogic {
             i++;
         }
         
-        char c = this.r;
+        char c = ;
+        String aString = "" + c;
         if (hiddenWord.contains(this.guessedLetters)) {
-            String aString = "" + c;
+            
         }
             
         return hiddenWord;
