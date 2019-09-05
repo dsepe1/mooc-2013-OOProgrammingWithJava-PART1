@@ -14,17 +14,24 @@ public class Counter {
     
     public Counter(int startingValue, boolean check) {
         this.value = startingValue;
-        if (this.value == 0) {
+        if (check == true) {
             this.check = true;
+        } else if (check == false) {
+            this.check = false;
         }
     }
     
-    public Counter(int startingValue) {
+    public Counter(int startingValue) {        
         this(startingValue, false);
     }
     
     public Counter(boolean check) {
-        this(0, true);
+//        if (check == true) {
+//            this.check = true;
+//        } else if (check == false) {
+//            this.check = false;
+//        }
+        this(0, check);
     }
     
     public Counter() {
@@ -34,7 +41,7 @@ public class Counter {
     public int value() {
         if (!this.check) {
             return this.value;
-        } else if (this.check) { 
+        } else if (this.check) {
             if (this.value < 0) {
                 this.value = 0;
             }
