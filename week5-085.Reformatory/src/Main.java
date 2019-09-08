@@ -20,6 +20,7 @@ public class Main {
         reform1.weight(andy);
         System.out.println("total weights measured: " + reform1.totalWeightsMeasured());
         
+        // Calling weight method here #4
         reform1.weight(carmen);
         reform1.feed(carmen);
         // Getting Carmen's weight here without calling the weight method
