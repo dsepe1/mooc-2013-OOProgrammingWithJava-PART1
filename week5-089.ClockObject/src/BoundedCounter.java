@@ -13,7 +13,7 @@ public class BoundedCounter {
     private int upperLimit;
     
     public BoundedCounter(int upperLimit) {
-        if (upperLimit >= 0 && upperLimit <= 59) {
+        if (upperLimit > 0 && upperLimit < 60) {
             this.upperLimit = upperLimit;
         }
     }
@@ -39,7 +39,7 @@ public class BoundedCounter {
     }
     
     public void setValue(int startingValue) {
-        if (startingValue >=0 && startingValue <= upperLimit) {
+        if (startingValue >= 0 && startingValue <= upperLimit) {
             this.value = startingValue;
         }
     }

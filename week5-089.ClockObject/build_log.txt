@@ -70,21 +70,16 @@ deps-jar:
 compile:
 
 -pre-pre-compile-test:
-    [mkdir] Created dir: /Users/danielsepejr./NetBeansProjects/mooc-2013-OOProgrammingWithJava-PART1/week5-089.ClockObject/build/test/classes
 
 -pre-compile-test:
 
 -compile-test-depend:
 
 -do-compile-test:
-    [javac] Compiling 1 source file to /Users/danielsepejr./NetBeansProjects/mooc-2013-OOProgrammingWithJava-PART1/week5-089.ClockObject/build/test/classes
-    [javac] warning: [options] bootstrap class path not set in conjunction with -source 1.6
-    [javac] 1 warning
-     [copy] Copying 1 file to /Users/danielsepejr./NetBeansProjects/mooc-2013-OOProgrammingWithJava-PART1/week5-089.ClockObject/build/test/classes
 
 -post-compile-test:
 
 compile-test:
 
 BUILD SUCCESSFUL
-Total time: 1 second
+Total time: 0 seconds
