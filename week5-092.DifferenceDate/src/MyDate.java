@@ -31,36 +31,28 @@ public class MyDate {
     }
     
     public int differenceInYears(MyDate comparedDate) {
-        // Main method code worked okay with thisGreaterYear.differenceInYears(comparedLesserYear)
-        if (this.year < comparedDate.year) {
-            MyDate lesserClone = new MyDate(this.day, this.month, this.year);
-            MyDate greaterClone = new MyDate(comparedDate.day, comparedDate.month, comparedDate.year);            
-            greaterClone.differenceInYears(lesserClone);
-        }
         
-//        int greaterYear = this.year;
-//        int lesserYear = comparedDate.year;
-//        if (comparedDate.year > this.year) {
-//            greaterYear = comparedDate.year;
-//            lesserYear = this.year;
-//        }
-        
-
         int yearDiff = this.year - comparedDate.year;
         if (yearDiff < 0) {
             yearDiff = -yearDiff;
         }
+
+        int laterTotalDays;
+        int earlierTotalDays;
+        laterTotalDays = this.day + this.month * 30;
+        earlierTotalDays = comparedDate.day + comparedDate.month * 30;
+        if (this.earlier(comparedDate)) {
+            laterTotalDays = comparedDate.day + comparedDate.month * 30;
+            earlierTotalDays = this.day + this.month * 30;
+        }
         
-        int thisTotalDays = this.day + this.month * 30;
-        int comparedTotalDays = comparedDate.day + comparedDate.month * 30;
-        int diffTotalDays = thisTotalDays - comparedTotalDays;
+        int diffTotalDays = laterTotalDays - earlierTotalDays;
         if (diffTotalDays < 0) {
             diffTotalDays = -diffTotalDays;
             if (diffTotalDays < 365) {
                 yearDiff--;
             }
         }
-        
         return yearDiff;
     }
 
