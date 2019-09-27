@@ -25,6 +25,9 @@ public class Person {
     
     public boolean olderThan(Person compared) {
         // compare the ages based on birthdays
+        if (this.birthday.earlier(compared.birthday)) {
+            return true;
+        }
         return false;
     }
     
