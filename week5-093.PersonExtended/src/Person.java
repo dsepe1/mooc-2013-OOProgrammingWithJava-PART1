@@ -9,6 +9,23 @@ public class Person {
         this.birthday = new MyDate(pp, kk, vv);
     }
     
+    public Person(String name, MyDate birthday) {
+        this.name = name;
+        this.birthday = birthday;
+    }
+    
+    public Person(String name) {
+        this.name = name;
+        
+        int currentDay = Calendar.getInstance().get(Calendar.DATE);
+        int currentMonth = Calendar.getInstance().get(Calendar.MONTH) + 1; // January is 0 so we add one
+        int currentYear = Calendar.getInstance().get(Calendar.YEAR);
+        
+        MyDate currentDate = new MyDate(currentDay, currentMonth, currentYear);
+        
+        this.birthday = currentDate;
+    }
+    
     
     public int age() {
 // calculate the age based on the birthday and the current day
@@ -38,4 +55,5 @@ public class Person {
     public String toString() {
         return this.name + ", born " + this.birthday;
     }
+    
 }
