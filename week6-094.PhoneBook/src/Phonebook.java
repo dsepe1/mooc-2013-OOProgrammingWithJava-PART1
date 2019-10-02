@@ -24,4 +24,13 @@ public class Phonebook {
         }
     }
     
+    public String searchNumber(String name) {
+        for (Person person : this.list) {
+            if (name.equals(person.getName())) {
+                return person.getNumber();
+            }
+        }
+    return "number not known";
+    }
+    
 }
